@@ -1,19 +1,19 @@
 a = int(input("aの値を入力: "))
 b = int(input("bの値を入力: "))
 
-# TODO
-
-if a <= 1:
-    print(a,"は素数ではありません。")
-else:
- prime_a = True
- for i in range(1,a //2):
-    if a % (i + 1) == 0:
-      prime_a = False
-      break  
-    if prime_a == True:
-        print(a, "は素数です")
-        break
+def judging_prime(c): # cが素数であることを調べる。
+    if c <= 1:
+     print(c,"は素数ではありません。")
     else:
-        print(a, "は素数ではありません")
-        break
+     prime_c = True
+     for i in range(1,c //2):
+      if c % (i+1) == 0:
+        prime_c = False
+      break  
+     if prime_c == True:
+        print(c, "は素数です。")
+     else:
+        print(c, "は素数ではありません。")
+    
+judging_prime(a)
+judging_prime(b)
