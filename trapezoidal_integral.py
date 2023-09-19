@@ -1,5 +1,7 @@
 from math import sin,pi
-h = (pi/2)/100 #問題文に基づいて考えた。 
+a = 0
+b = pi/2
+h = (b-a)/100 #問題文に基づいて考えた。 
 k = 1
 s = 0 #初期状態を定義 
 while k <= 100:
