@@ -1,19 +1,17 @@
-a = int(input("aの値を入力: "))
-b = int(input("bの値を入力: "))
-
-# TODO
-
-if a <= 1:
-    print(a,"は素数ではありません。")
-else:
- prime_a = True
- for i in range(1,a //2):
-    if a % (i + 1) == 0:
-      prime_a = False
-      break  
-    if prime_a == True:
-        print(a, "は素数です")
-        break
+n = input('自然数を入力してください。')
+try: #ここではtry-except文を用いる。
+    n = int(n)  # ユーザー入力を整数に変換
+    if n <= 0:
+        print('入力された数は自然数でない。')
     else:
-        print(a, "は素数ではありません")
-        break
+        i = 2
+        while i < n:
+           if n%i == 0:
+              print('nは素数でない。')
+              break
+           elif i < n:
+              i += 1
+        else: 
+              print('nは素数である。')
+except ValueError:
+    print('入力された数は自然数でない。')
