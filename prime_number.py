@@ -17,4 +17,8 @@ def judging_prime(c):
         print(c, "は素数ではありません")
     
 judging_prime(a)
+<<<<<<< HEAD
 judging_prime(b)
+=======
+judging_prime(b)
+>>>>>>> 7febed8 (指摘箇所の訂正)
