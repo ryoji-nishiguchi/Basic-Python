@@ -15,3 +15,6 @@ try: #ここではtry-except文を用いる。
               print('nは素数である。')
 except ValueError:
     print('入力された数は自然数でない。')
+    
+a = input("aの値を入力: ")
+b = input("bの値を入力: ")
