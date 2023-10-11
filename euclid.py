@@ -2,18 +2,17 @@ a = int(input("a の値を入力: "))
 b = int(input("b の値を入力: "))
 def god(a,b): #(a,b)の最大公約数を求める関数を定義
  if a >= b:
-    c = a
-    d = b
+    if b == 0:
+     return a
+    else:
+     return god(b,a%b) #bの値が0になるまで何度も自分自身を呼び出す。
  else:
-    d = a
-    c = b
-    while d>0:
-       (c,d) = (d,c%d)
-    return c
+   return god(b,a)
 
-print('整数(a,b)の最大公約数は{}である。'.format(god(a,b)))
-
-if (god(a,b) == 1) == True:
-   print('整数(a,b)は互いに素である。')
-else:
-   print('整数(a,b)の最大公約数は{}であり、互いに素でない。' .format(god(a,b)) )
+def god2(a,b):
+ if god(a,b)==1:
+    return True
+ else:
+  return False
+print('整数(a,b)の最大公約数は{}。'.format(god(a,b)))
+print('整数(a,b)の最大公約数が互いに素である命題は{}である。' .format(god2(a,b)))
